@@ -3,8 +3,8 @@ import { ArrowDown, ArrowRight, ArrowUpRight, Clock3, MapPin, Menu, Phone, Shopp
 
 const phone = '093143 44509';
 const tel = 'tel:+919314344509';
-const address = 'Plot No 9-F-17 Rangbari Road, 3rd, opposite Police Thana, Mahaveer Nagar, Kota, Rajasthan 324005';
-const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+const address = 'City Center, Sawai Madhopur, Rajasthan';
+const directions = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`Parivartan Clothing Store, ${address}`)}`;
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,12 +14,12 @@ function App() {
     <main className="page-shell">
       <div className="topline">
         <span>YOUR NEIGHBOURHOOD CLOTHING STORE</span>
-        <span className="topline-right"><MapPin size={13} /> MAHAVEER NAGAR, KOTA</span>
+        <span className="topline-right"><MapPin size={13} /> CITY CENTER, SAWAI MADHOPUR</span>
       </div>
       <header className="site-header">
         <a className="brand" href="#home" aria-label="Parivartan home" onClick={closeMenu}>
           <span className="brand-mark">प</span>
-          <span className="brand-name">PARIVARTAN<small>परिवर्तन · KOTA</small></span>
+          <span className="brand-name">PARIVARTAN<small>परिवर्तन · SAWAI MADHOPUR</small></span>
         </a>
         <button className="mobile-menu" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -36,7 +36,7 @@ function App() {
         <div className="hero-copy">
           <div className="eyebrow"><span className="eyebrow-line" /> A LITTLE STYLE, A LOT OF HEART</div>
           <h1 className="serif reveal">Good days<br />look <em>good</em> on you.</h1>
-          <p className="hero-deck reveal reveal-delay">A friendly place in Kota to find something that feels like you. Come in, take your time, and discover ready-to-wear for the everyday and the in-between.</p>
+          <p className="hero-deck reveal reveal-delay">A friendly place in Sawai Madhopur to find something that feels like you. Come in, take your time, and discover ready-to-wear for the everyday and the in-between.</p>
           <div className="hero-actions reveal reveal-late">
             <a className="button button-dark" href={directions} target="_blank" rel="noreferrer">Find our store <ArrowUpRight size={17} /></a>
             <a className="text-link" href={tel}><Phone size={16} /> {phone}</a>
@@ -46,15 +46,15 @@ function App() {
         <div className="hero-visual">
           <div className="hero-image photo-hover"><img src="/parivartan-editorial.jpg" alt="Contemporary Indian clothing in warm rust and teal tones" /></div>
           <div className="hero-stamp"><span className="hindi">अपना अंदाज़</span><span>YOUR STYLE<br />YOUR WAY</span></div>
-          <div className="hero-caption"><span>MADE FOR REAL DAYS</span><span>01 — KOTA</span></div>
+          <div className="hero-caption"><span>MADE FOR REAL DAYS</span><span>01 — SAWAI MADHOPUR</span></div>
           <div className="sun-disc" aria-hidden="true" />
         </div>
         <a href="#discover" className="scroll-cue"><ArrowDown size={15} /> SCROLL A LITTLE</a>
       </section>
 
-      <div className="ticker" aria-label="Parivartan clothing store in Kota">
+      <div className="ticker" aria-label="Parivartan clothing store in Sawai Madhopur">
         <div className="marquee-track">
-          {[0, 1, 2, 3].map((item) => <span className="ticker-unit" key={item}>A GOOD FIND IS A GOOD FEELING <i>✳</i> PARIVARTAN, KOTA <i>✳</i> COME AS YOU ARE <i>✳</i></span>)}
+          {[0, 1, 2, 3].map((item) => <span className="ticker-unit" key={item}>A GOOD FIND IS A GOOD FEELING <i>✳</i> PARIVARTAN, SAWAI MADHOPUR <i>✳</i> COME AS YOU ARE <i>✳</i></span>)}
         </div>
       </div>
 
@@ -110,7 +110,7 @@ function App() {
         <div className="service-list">
           <article className="service-row">
             <span className="service-index">A</span><div className="service-icon"><ShoppingBag /></div>
-            <div className="service-text"><h3>In-store shopping</h3><p>Visit us in Mahaveer Nagar and browse in person.</p></div>
+            <div className="service-text"><h3>In-store shopping</h3><p>Visit us in City Center, Sawai Madhopur and browse in person.</p></div>
             <a href={directions} target="_blank" rel="noreferrer" aria-label="Get directions to shop in store"><ArrowUpRight /></a>
           </article>
           <article className="service-row">
@@ -139,12 +139,12 @@ function App() {
       </section>
 
       <section className="visit section-pad" id="visit">
-        <div className="section-kicker"><span>03 / RIGHT HERE IN KOTA</span><span>COME ON OVER</span></div>
+        <div className="section-kicker"><span>03 / RIGHT HERE IN SAWAI MADHOPUR</span><span>COME ON OVER</span></div>
         <div className="visit-grid">
           <div className="visit-copy">
             <span className="visit-label">FIND PARIVARTAN</span>
             <h2 className="serif">Just around<br />the <em>corner.</em></h2>
-            <p>We’re on Rangbari Road, opposite Police Thana in Mahaveer Nagar. Find us at Plot No 9-F-17, 3rd.</p>
+            <p>Find us in City Center, Sawai Madhopur, Rajasthan.</p>
             <a className="button button-dark" href={directions} target="_blank" rel="noreferrer"><MapPin size={17} /> Get directions <ArrowUpRight size={16} /></a>
           </div>
           <div className="visit-details">
@@ -152,8 +152,8 @@ function App() {
               <div className="map-art" aria-hidden="true">
                 <div className="map-road road-one" /><div className="map-road road-two" /><div className="map-road road-three" />
                 <div className="map-plot"><span className="map-pin"><MapPin size={20} /></span><span>PARIVARTAN</span></div>
-                <span className="map-label map-label-one">RANGBARI ROAD</span><span className="map-label map-label-two">MAHAVEER NAGAR</span>
-                <span className="map-landmark">POLICE THANA</span>
+                <span className="map-label map-label-one">CITY CENTER</span><span className="map-label map-label-two">SAWAI MADHOPUR</span>
+                <span className="map-landmark">PARIVARTAN</span>
               </div>
               <div className="address-content">
                 <span className="address-overline">COME FIND US</span>
@@ -179,9 +179,9 @@ function App() {
 
       <footer className="footer">
         <a className="brand footer-brand" href="#home">
-          <span className="brand-mark">प</span><span className="brand-name">PARIVARTAN<small>परिवर्तन · KOTA</small></span>
+          <span className="brand-mark">प</span><span className="brand-name">PARIVARTAN<small>परिवर्तन · SAWAI MADHOPUR</small></span>
         </a>
-        <div className="footer-address"><MapPin size={15} /><span>Plot No 9-F-17, Rangbari Road, Mahaveer Nagar, Kota</span></div>
+        <div className="footer-address"><MapPin size={15} /><span>{address}</span></div>
         <a className="footer-phone" href={tel}><Phone size={15} /> {phone}</a>
         <span className="footer-note">A local store. A warm welcome.</span>
       </footer>
