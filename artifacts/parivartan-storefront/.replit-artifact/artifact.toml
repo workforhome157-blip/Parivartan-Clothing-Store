@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Parivartan Clothing Store"
+description = "A responsive storefront website for Parivartan, a family clothing store in Kota, Rajasthan. It introduces the store and its clothing collections and helps visitors call, get directions, and learn about pickup and delivery."
+version = "1.0.0"
+id = "artifacts/parivartan-storefront"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25720
+
+[services.development]
+run = "pnpm --filter @workspace/parivartan-storefront run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/parivartan-storefront", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/parivartan-storefront/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25720"
+BASE_PATH = "/"
